@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -12,8 +12,7 @@ import "./index.css";
 const App: React.FC = () => {
   return (
     <Router>
-      <Header />
-      <main className="mt-16">
+      <Navbar />
         <Routes>
           <Route path="/" element={< Home />} />
           <Route path="/product" element={<Product/>} />
@@ -21,7 +20,6 @@ const App: React.FC = () => {
           <Route path="/testimonials" element={<Testimonials/>} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
-      </main>
       <Footer />
     </Router>
   );
