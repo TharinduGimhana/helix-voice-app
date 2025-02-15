@@ -15,11 +15,11 @@ const App: React.FC = () => {
       <Header />
       <main className="mt-16">
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
-          <Route path="/product" element={<h1>Product</h1>} />
-          <Route path="/about" element={<h1>About Us</h1>} />
-          <Route path="/testimonials" element={<h1>Testimonials</h1>} />
-          <Route path="/contact" element={<h1>Contact</h1>} />
+          <Route path="/" element={< Home />} />
+          <Route path="/product" element={<Product/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/testimonials" element={<Testimonials/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </main>
       <Footer />
