@@ -71,6 +71,10 @@
     font-size: 18px;
     gap: 40px;
   }
+
+  .contact-btn:hover{
+    color: orange;
+  }
   
   .contact-btn.active-btn {
     background-color: orange;

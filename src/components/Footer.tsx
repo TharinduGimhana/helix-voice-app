@@ -1,29 +1,37 @@
-import React from 'react';
+import "./Footer.css";
+import logo from "../assets/images/home/logo.png";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white p-6">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        {/* Address Section */}
-        <div className="mb-4 md:mb-0">
-          <h3 className="text-lg font-semibold">Find us:</h3>
-          <p className="text-sm">B9R Clarkson Ave, Black</p>
-          <p className="text-sm">Canab, BC, Canada (2018)</p>
+    <footer className="footer">
+      <div className="footer-container">
+        {/* Brand Logo */}
+        <div className="footer-brand">
+        <div className="footer-logo">
+          <img src={logo} alt="HelixVoice Logo" className="footer-logo-img" />
+        </div>
         </div>
 
-        {/* Working Hours Section */}
-        <div className="mb-4 md:mb-0">
-          <h3 className="text-lg font-semibold">Working Hours:</h3>
-          <p className="text-sm">Monday - Friday: 8:00 am - 6:00 pm</p>
-          <p className="text-sm">Saturday - Sunday: Contact via email</p>
+        {/* Address and Working Hours */}
+        <div className="footer-info">
+          <p><strong>Find us:</strong><br /> 8918 Clarkson Ave, Black Creek, BC, Canada V9J1B1</p>
+          <p><strong>Working Hours:</strong><br /> 
+            Monday - Friday: 8.00 am - 6.00 pm <br />
+            Saturday - Sunday: Contact via email
+          </p>
         </div>
 
-        {/* Copyright Section */}
-        <div className="text-center md:text-right">
-          <p className="text-sm">&copy; 2023 Helixvoice</p>
-          <p className="text-sm">Pricing Policy</p>
-          <p className="text-sm">Follow us on</p>
+        {/* Contact Button */}
+        <div className="footer-contact">
+          <button className="contact-btn">Let's Talk</button>
         </div>
+      </div>
+
+      {/* Footer Bottom Section */}
+      <div className="footer-bottom">
+        <p>©2025 HelixVoice</p>
+        <a href="#">Privacy Policy</a>
+        <p>Follow us on <span className="social-icon">X</span></p>
       </div>
     </footer>
   );
