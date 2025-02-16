@@ -10,17 +10,17 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        {/* Logo */}
+
         <div className="logo">
           <img src={logo} alt="HelixVoice Logo" className="logo-img" />
         </div>
 
-        {/* Toggle Button */}
+
         <button className="toggle-btn" onClick={() => setIsOpen(!isOpen)}>
           ☰
         </button>
 
-        {/* Navigation Links & Contact Button Inside */}
+
         <div className={`nav-menu ${isOpen ? "open" : ""}`}>
           <ul className="nav-links">
             <li>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Contact Button - Shown Inside Toggle Menu on Mobile */}
+
           <Link to="/contact" className={`contact-btn ${location.pathname === "/contact" ? "active-btn" : ""}`} onClick={() => setIsOpen(false)}>
             CONTACT
           </Link>

@@ -1,37 +1,44 @@
 import "./Footer.css";
 import logo from "../assets/images/home/logo.png";
+import { SocialIcon } from 'react-social-icons'
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        {/* Brand Logo */}
+    <footer className="footer-top">
+      <div className="footer-container-top">
+
         <div className="footer-brand">
-        <div className="footer-logo">
-          <img src={logo} alt="HelixVoice Logo" className="footer-logo-img" />
-        </div>
+          <div className="footer-logo">
+            <img src={logo} alt="HelixVoice Logo" className="footer-logo-img" />
+          </div>
         </div>
 
-        {/* Address and Working Hours */}
+
         <div className="footer-info">
-          <p><strong>Find us:</strong><br /> 8918 Clarkson Ave, Black Creek, BC, Canada V9J1B1</p>
-          <p><strong>Working Hours:</strong><br /> 
-            Monday - Friday: 8.00 am - 6.00 pm <br />
-            Saturday - Sunday: Contact via email
-          </p>
+          <p><strong>Find us:</strong><br /> 8918 Clarkson Ave, Black<br /> Creek, BC, Canada V9J1B1</p>
         </div>
 
-        {/* Contact Button */}
-        <div className="footer-contact">
-          <button className="contact-btn">Let's Talk</button>
+        <div className="footer-info">
+          <p><strong>Working Hours:</strong><br />
+            Monday - Friday <span>&nbsp;   </span>  <span>&nbsp;   </span> 8.00 am - 6.00 pm <br />
+            Saturday - Sunday <span>&nbsp;   </span>  Contact via email
+          </p>
         </div>
       </div>
 
-      {/* Footer Bottom Section */}
-      <div className="footer-bottom">
-        <p>©2025 HelixVoice</p>
+      <div className="footer-container-middle">
+        <div className="footer-bottom footer-middle">
+          <h1>Ready to discuss with you!</h1>
+          <a href="#"> Lets Talk</a>
+        </div>
+
+      </div>
+
+      <div className="footer-bottom footer-social">
+        <p className="right-style">©2025 HelixVoice</p>
         <a href="#">Privacy Policy</a>
-        <p>Follow us on <span className="social-icon">X</span></p>
+        <p>Follow us on <span>&nbsp;   </span> <span className="social-icon"><FaXTwitter size={22} /></span></p>
       </div>
     </footer>
   );
