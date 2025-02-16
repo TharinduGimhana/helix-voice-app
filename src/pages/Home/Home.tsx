@@ -1,8 +1,9 @@
 import React from "react";
+import Background from "./background";
 
 const Home: React.FC = () => {
-  return <div className="bg-red-500">
-    Test Tailwind CSS
+  return <div>
+    <Background />
   </div>;
 };
 

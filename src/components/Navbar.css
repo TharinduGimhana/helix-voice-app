@@ -99,6 +99,7 @@
 
   .nav-links {
     flex-direction: column;
+    padding: 0px;
   }
 
   .nav-links li {
