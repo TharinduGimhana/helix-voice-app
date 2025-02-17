@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../components/Products.css";
+import Background from "./Background";
 
 // Define Product Type
 type Product = {
@@ -22,9 +23,7 @@ const Product = () => {
 
   return (
     <div className="products-container">
-    <div className="products-title">
-      <h2>Scalar Products</h2>
-    </div>
+    <Background />
     <div className="products-grid">
       {products.map((product, index) => (
         <div className="product-card" key={index}>

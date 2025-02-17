@@ -5,36 +5,6 @@
     text-align: center;
   }
   
-  .products-title {
-    width: 100%;
-    text-align: center;
-    color: #1E1E1E;
-    font-size: 1.8rem;
-    /* font-weight: bold; */
-    padding: 40px 0; /* Adjust padding to control height */
-    background-image: url('../assets/images/products/scalar_products.png');
-    background-size: 100% 220%;
-    background-color: rgb(193, 219, 233);
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-
-  .products-title h2 {
-    position: relative; /* Moves the title above other elements */
-    z-index: 2; /* Ensures the title stays above the background */
-    color: #1E1E1E; /* Ensure the color is applied */
-  }   
-  .products-title::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(251, 250, 250, 0.4); /* Dark overlay (adjust opacity) */ 
-    z-index: 1; /* Place it behind the text */
-}
   
   .products-grid {
     display: grid;
@@ -133,12 +103,6 @@
         text-align: center; /* Centers the image */
         padding: 25px;
     }
-  
-    .products-title {
-      width: 100%; /* Reduce width for tablets */
-      margin: 0 auto; /* Center the section */
-    }
-
     .product-image {
       margin-left: auto;
       margin-right: auto; /* Optionally center the image horizontally */
