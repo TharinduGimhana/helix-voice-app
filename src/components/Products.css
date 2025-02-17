@@ -1,0 +1,164 @@
+.products-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 20px; */
+    text-align: center;
+  }
+  
+  .products-title {
+    width: 100%;
+    text-align: center;
+    color: #1E1E1E;
+    font-size: 1.8rem;
+    /* font-weight: bold; */
+    padding: 40px 0; /* Adjust padding to control height */
+    background-image: url('../assets/images/products/scalar_products.png');
+    background-size: 100% 220%;
+    background-color: rgb(193, 219, 233);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .products-title h2 {
+    position: relative; /* Moves the title above other elements */
+    z-index: 2; /* Ensures the title stays above the background */
+    color: #1E1E1E; /* Ensure the color is applied */
+  }   
+  .products-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(251, 250, 250, 0.4); /* Dark overlay (adjust opacity) */ 
+    z-index: 1; /* Place it behind the text */
+}
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    /* gap: 20px; */
+    /* max-width: 1200px; */
+    margin: auto;
+  }
+  
+  .product-card {
+    display: flex;
+    align-items: center; /* Aligns content vertically */
+    gap: 20px; /* Adds spacing between image and text */
+    background: white;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid #EEEEEE;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .product-image-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    width: 100%; /* Ensure the container takes up full width */
+  }
+
+  .product-image {
+    max-width: 50%; /* Make sure the image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    text-align: left; /* Ensure text aligns left */
+    padding: 10px;
+  }
+
+  .product-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Add spacing between price and button */
+  }
+
+  .product-info h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .product-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff9800; /* Adjust color as needed */
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+  
+  .buy-now {
+    background-color: black;
+    color: white;
+    padding: 5px 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%; /* This will make the button take the full width of its container */
+    max-width: 400px; /* Limits the width on larger screens */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  }
+  
+  .buy-now:hover {
+    background: #333;
+  }
+  
+   /* Responsive Design */
+    @media (max-width: 768px) {
+
+    .products-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .product-card {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center content */
+    }
+  
+    .product-image-container {
+        width: 100%; /* Ensure image container spans full width */
+        text-align: center; /* Centers the image */
+        padding: 25px;
+    }
+  
+    .products-title {
+      width: 100%; /* Reduce width for tablets */
+      margin: 0 auto; /* Center the section */
+    }
+
+    .product-image {
+      margin-left: auto;
+      margin-right: auto; /* Optionally center the image horizontally */
+      padding: 25px;
+    }
+
+    .product-info {
+        align-items: center; /* Center content */
+        text-align: center; /* Center text */
+    }
+
+    .product-price {
+        font-size: 2.2rem; /* Larger font size */
+        text-align: center; /* Center-align text */
+        display: block; /* Ensure proper centering */
+    }
+
+    .product-actions {
+        flex-direction: column-reverse; /* Reverses order to show price first */
+        align-items: flex-start; /* Keep left-aligned */
+        gap: 5px; /* Adjust spacing */
+    }
+  }

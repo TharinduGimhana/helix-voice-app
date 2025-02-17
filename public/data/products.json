@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Scalar Headphones",
+    "description": "When running you will see the LEDs flashing on the side.",
+    "price": "$50",
+    "image": "/src/assets/images/products/head_phone.png"
+  },
+  {
+    "name": "Scalar Headphones",
+    "description": "While running you can see the LEDs inside Headphones working.",
+    "price": "$50",
+    "image": "/src/assets/images/products/head_phone2.png"
+  },
+  {
+    "name": "Helix Scalar Unit",
+    "description":
+      "In as little as 30 minutes, the Helix Scalar is capable of penetrating every cell in the entire body, delivering a sense of general wellness.",
+    "price": "$50",
+    "image": "/src/assets/images/products/helix_scalar_unit.png"
+  },
+  {
+    "name": "Helix Scalar Unit on Stand",
+    "description":
+      "Helix Scalar is able to deliver a true longitudinal wave and doesn’t need the use of any potentially harmful carrier wave.",
+    "price": "$50",
+    "image": "/src/assets/images/products/helix_scalar_unit_on_stand.png"
+  }
+  ]
+  
