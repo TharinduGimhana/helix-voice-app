@@ -1,4 +1,4 @@
-.products-title {
+.testimo-title {
     width: 100%;
     height: 250px;
     text-align: center;
@@ -6,7 +6,7 @@
     font-size: 1.8rem;
     padding: 40px 0;
     background-size: cover;
-    background-image: url('../../assets/images/products/scalar_products.png');
+    background-image: url('../../assets/images/testimonials/wave-background.png');
     background-color: rgb(177, 214, 235);
     background-position: center;
     background-repeat: no-repeat;
@@ -16,15 +16,16 @@
     justify-content: center; 
 }
 
-.products-title h2 {
+.testimo-title h2 {
     position: relative; 
+
     color: #1c2126;
     font-size: 58px;
     text-align: center;
     margin: 0;
 }
 
-.products-title::before {
+.testimo-title::before {
     content: '';
     position: absolute;
     top: 0;
@@ -37,11 +38,12 @@
 
 
 @media (max-width: 768px) {
-    .products-title {
+    .testimo-title {
         height: 200px;
+        font-size: 1.2rem;
     }
 
-    .products-title h2 {
+    .testimo-title h2 {
         font-size: 30px;
         padding: 10px;
     }

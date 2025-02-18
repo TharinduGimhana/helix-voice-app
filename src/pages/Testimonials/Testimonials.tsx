@@ -1,7 +1,12 @@
 import React from "react";
+import Background from "./Background";
+import TestimonialCards from "./TestimonialCards";
 
 const Testimonials: React.FC = () => {
-  return <h1>Testimonials Page</h1>;
+  return <div>
+    <Background />
+    <TestimonialCards />
+  </div>;
 };
 
 export default Testimonials;

@@ -158,4 +158,8 @@
     justify-content: center;
     padding: 5px;
   }
+
+  .footer-middle h1 {
+    font-size: 30px;
+  }
 }
