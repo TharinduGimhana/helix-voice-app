@@ -1,0 +1,108 @@
+/* Container */
+.container-voicenotes {
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+/* Image Section */
+.image-container-voicenotes {
+  width: 230px;
+  height: 230px;
+  background-color: #1c2126;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: auto; */
+}
+
+.microphone-icon {
+  width: 130px;
+  height: 130px;
+}
+
+/* Content Section */
+.content-voicenotes {
+  max-width: 900px;
+}
+
+/* Typography */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  color: #666;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.bullet {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.footer-text {
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+/* Adjust container for normal screens */
+@media (min-width: 899px) {
+  .container-voicenotes {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Pushes content and image apart */
+  }
+
+  .image-container-voicenotes {
+    order: 2; /* Moves image to the right */
+    margin-left: auto; 
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .content-voicenotes {
+    max-width: 600px;
+  }
+
+  .container-voicenotes {
+    flex-direction: column;
+  }
+
+  .image-container-voicenotes {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .microphone-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+}

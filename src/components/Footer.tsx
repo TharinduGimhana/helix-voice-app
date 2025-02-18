@@ -37,8 +37,8 @@ const Footer = () => {
 
       <div className="footer-bottom footer-social">
         <p className="right-style">©2025 HelixVoice</p>
-        <a href="#">Privacy Policy</a>
-        <p>Follow us on <span>&nbsp;   </span> <span className="social-icon"><FaXTwitter size={22} /></span></p>
+        <a className="privacy-p" href="#">Privacy Policy</a>
+        <p className="social-w">Follow us on <span>&nbsp;   </span> <span className="social-icon"><FaXTwitter size={22} /></span></p>
       </div>
     </footer>
   );
