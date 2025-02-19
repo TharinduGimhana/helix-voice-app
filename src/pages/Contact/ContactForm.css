@@ -1,0 +1,155 @@
+.contact-form {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left {
+  background: black;
+  color: white;
+  padding: 30px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px 0 0 12px;
+}
+
+.contact-left h2 {
+  margin: 0;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.contact-info svg {
+  margin-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.contact-right {
+  background: white;
+  padding: 30px;
+  width: 60%;
+  border-radius: 0 12px 12px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.column-label {
+  width: 48%;
+  font-weight: bold;
+  font-size: 14px;
+  color: gray;
+  transition: color 0.3s ease;
+}
+
+/* Change label to black when input is focused */
+.column-label.active {
+  color: black;
+}
+
+.row input, .row textarea {
+  width: 48%;
+  border: none;
+  border-bottom: 2px solid gray;
+  padding: 8px;
+  font-size: 14px;
+  outline: none;
+  color: gray;
+  background: transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.row input:focus, .row textarea:focus {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.row textarea {
+  width: 100%;
+  height: 80px;
+  resize: none;
+}
+
+.file-upload {
+  text-align: center;
+  border: 2px dashed gray;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.file-upload label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-icon {
+  font-size: 24px;
+  color: gray;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.send-button {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background: darkorange;
+}
+
+/* Hide default file input */
+.file-upload input[type="file"] {
+  display: none;
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+  background: orange;
+  color: white;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.custom-file-upload:hover {
+  background: darkorange;
+}
+
+/* File name display */
+.file-name {
+  margin-left: 10px;
+  font-size: 14px;
+  color: gray;
+}

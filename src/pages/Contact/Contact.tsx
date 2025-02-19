@@ -1,7 +1,12 @@
 import React from "react";
+import Background from "./Background";
+import ContactBox from "./ContactForm";
 
 const Contact: React.FC = () => {
-  return <h1>Contact Page</h1>;
+  return <div> 
+    <Background />
+    <ContactBox />
+  </div>;
 };
 
 export default Contact;
