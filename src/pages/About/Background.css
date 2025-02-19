@@ -1,0 +1,58 @@
+.about-title {
+    width: 100%;
+    height: 250px;
+    font-size:58px;
+    text-align: center;
+    color: #1E1E1E;
+    /* padding: 40px 0; */
+    background-size: cover;
+    background-image: url('../../assets/images/products/scalar_products.png');
+    background-color: rgb(177, 214, 235);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex; 
+    align-items: center;  
+    justify-content: center; 
+}
+
+.about-title h2 {
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #1E1E1E;
+    position: relative;
+    margin: 0 auto; /* Center text */
+    line-height: 1.2; /* Adjust spacing */
+}
+
+.about-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.527); 
+ 
+}
+
+@media (max-width: 768px) {
+    .about-title h2 {
+        font-size: 3.2rem;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile View (Below 480px) */
+@media (max-width: 480px) {
+
+    .about-title {
+        padding: 0;
+    }
+
+    .about-title h2 {
+        font-size: 2rem; /* Even smaller for mobile */
+    }
+}

@@ -1,0 +1,131 @@
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-content {
+    display: flex;
+    width: 100%;
+    max-width: 100%; /* Restricts max width for better layout */
+}
+
+/* Left and Right Sections */
+.bottom-left,
+.bottom-right {
+    width: 50%; /* Equal division */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Left Side: Two Equal Cards */
+.bottom-left {
+    height: 100%;
+}
+
+.card {
+    flex: 1; /* Makes both cards equal height */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.card-image {
+    width: 100%;      /* Make image stretch to card width */
+    height: 100%;     /* Make image stretch to card height */
+    object-fit: cover; /* Ensures image fills the card without distortion */
+}
+
+/* Flip Image in Card-2 */
+.flipped-image {
+    transform: scaleY(-1); /* Flip image horizontally */
+}
+
+/* Right Side: Single Card */
+.bottom-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-card-content p {
+    font-size: 1.4rem;
+    line-height: 2.2;
+    color: #555;
+    padding: 40px;
+}
+
+/* For mobile portrait */
+@media only screen and (max-width: 480px) {
+    .bottom-content {
+        flex-direction: column;
+    }
+    .bottom-left, .bottom-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .right-card-content p {
+        font-size: 1.1rem;
+        line-height: 2;
+        padding: 15px;
+    }
+}
+
+/* For mobile landscape */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .right-card-content p {
+        font-size: 1.4rem;
+        line-height: 2.2;
+        padding: 20px;
+    }
+
+    .bottom-content {
+        display: inline;
+    }
+
+    .bottom-left, .bottom-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* For tablet portrait */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .bottom-content {
+        flex-direction: column;
+    }
+    
+    .right-card-content p {
+        font-size: 2rem;
+        padding: 30px;
+    }
+
+    .bottom-left, .bottom-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* For tablet landscape */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .bottom-content {
+        flex-direction: column;
+    }
+    .bottom-left, .bottom-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .right-card-content p {
+        font-size: 2rem;
+        padding: 30px;
+    }
+}

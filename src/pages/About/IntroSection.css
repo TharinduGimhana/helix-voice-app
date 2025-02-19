@@ -1,0 +1,105 @@
+/* Intro Section Container */
+.intro-container {
+    background-color: #f3f3f3; /* Light grey background */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Inner Content Wrapper */
+.intro-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Left Side - Text */
+.intro-text {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+.intro-text h2 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #1e1e1e;
+    line-height: 2.2;
+}
+
+.highlight {
+    color: #0056b3; /* Blue highlight */
+}
+
+/* Right Side - Image */
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* For mobile portrait */
+@media only screen and (max-width: 480px) {
+    .intro-content {
+        display: inline;
+    }
+    .intro-text {
+        padding: 20px;
+    }
+    .intro-text h2 {
+        font-size: 1.5rem;
+        line-height: 1.9;
+    }
+}
+
+  /* For mobile landscape */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .intro-content {
+        display: inline;
+    }
+    .intro-text {
+        padding: 10px;
+    }
+    .intro-text h2 {
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+}
+
+/* For tablet portrait */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        padding: 20px;
+    }
+
+    .intro-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For tablet landscape */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        padding: 20px;
+    }
+
+    .intro-image img {
+        width: 100%;
+        height: auto;
+    }
+}
