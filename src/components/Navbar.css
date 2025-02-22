@@ -54,7 +54,7 @@
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: orange;
+  color: #E25B19;
 }
 
 .contact-btn {
@@ -69,11 +69,11 @@
 }
 
 .contact-btn:hover {
-  color: orange;
+  color: #E25B19;
 }
 
 .contact-btn.active-btn {
-  background-color: orange;
+  background-color: #E25B19;
   color: white;
 }
 

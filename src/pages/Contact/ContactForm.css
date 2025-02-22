@@ -5,22 +5,29 @@
   margin: auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.048);
+  padding: 10px;
+  margin-bottom: 100px;
+  margin-top: -150px;
+  background: #fff;
 }
 
 .contact-left {
-  background: black;
+  background: #1c2126;
   color: white;
   padding: 30px;
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 12px 0 0 12px;
+  border-radius: 12px;
 }
 
 .contact-left h2 {
   margin: 0;
+}
+
+.contact-left p {
+  margin-top: 5px;
 }
 
 .contact-info div {
@@ -28,6 +35,7 @@
   align-items: center;
   margin: 10px 0;
   font-size: 14px;
+  line-height: 3.5;
 }
 
 .contact-info svg {
@@ -37,13 +45,30 @@
 .social-icons {
   display: flex;
   gap: 15px;
+}
+
+.social-icons svg {
+  background: #e25b19;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
   font-size: 18px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons svg:hover {
+  background: darkorange;
+  transform: scale(1.1);
 }
 
 .contact-right {
   background: white;
   padding: 30px;
-  width: 60%;
   border-radius: 0 12px 12px 0;
 }
 
@@ -55,21 +80,20 @@
 
 .column-label {
   width: 48%;
-  font-weight: bold;
   font-size: 14px;
   color: gray;
   transition: color 0.3s ease;
 }
 
-/* Change label to black when input is focused */
 .column-label.active {
   color: black;
 }
 
-.row input, .row textarea {
-  width: 48%;
+.row input,
+.row textarea {
+  width: 42%;
   border: none;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid gray;
   padding: 8px;
   font-size: 14px;
   outline: none;
@@ -78,7 +102,8 @@
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.row input:focus, .row textarea:focus {
+.row input:focus,
+.row textarea:focus {
   color: black;
   border-bottom: 2px solid black;
 }
@@ -91,10 +116,9 @@
 
 .file-upload {
   text-align: center;
-  border: 2px dashed gray;
+  border: 1px solid gray;
   padding: 20px;
   cursor: pointer;
-  border-radius: 8px;
 }
 
 .file-upload label {
@@ -104,35 +128,35 @@
 }
 
 .upload-icon {
-  font-size: 24px;
+  font-size: 50px;
   color: gray;
 }
 
 .button-row {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 0px;
 }
 
 .send-button {
-  background: orange;
+  background: #e25b19;
   color: white;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 .send-button:hover {
   background: darkorange;
 }
 
-/* Hide default file input */
 .file-upload input[type="file"] {
   display: none;
 }
 
-/* Custom file upload button */
 .custom-file-upload {
   background: orange;
   color: white;
@@ -147,9 +171,48 @@
   background: darkorange;
 }
 
-/* File name display */
 .file-name {
   margin-left: 10px;
   font-size: 14px;
   color: gray;
+}
+
+
+@media (min-width: 769px) {
+  .contact-left {
+    width: 40%;
+  }
+  
+  .contact-right {
+    width: 60%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column; 
+    padding: 20px;
+    margin-top: -100px;
+  }
+
+  .contact-left {
+    border-radius: 12px;
+  }
+
+  .row input{
+    width: 40%;
+  }
+
+  .row textarea {
+    width: 100%;
+  }
+
+  .social-icons {
+    margin-top: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 20px;
+  }
 }
