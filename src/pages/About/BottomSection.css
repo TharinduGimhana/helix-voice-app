@@ -56,8 +56,14 @@
 .right-card-content p {
     font-size: 1.4rem;
     line-height: 2.2;
-    color: #555;
+    color: #fff;
     padding: 40px;
+}
+
+.right-card-content{
+    background: #1E1E1E;
+    border-radius: 0px;
+   
 }
 
 /* For mobile portrait */

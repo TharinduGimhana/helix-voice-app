@@ -7,50 +7,6 @@
     align-items: center;
 }
 
-/* About Section Layout */
-.about-section {
-    display: flex;
-    background: white;
-    width: 100%;
-}
-
-/* Left Sidebar */
-.about-sidebar {
-    background: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    /* padding: 40px; */
-}
-
-.about-sidebar h2 {
-    font-size: 55px;
-    transform: rotate(-90deg);
-    white-space: nowrap;
-}
-
-/* Main Content */
-.about-content {
-    width: 50%;
-    color: #333;
-    font-size: 20px;
-    line-height: 2.4;
-}
-
-.about-content p {
-    font-size: 1.6rem;
-    line-height: 2.2;
-    color: #555;
-    padding: 40px;
-}
-
-/* Right Sidebar (Orange Section) */
-.about-right {
-    background: #E46926; /* Orange color */
-    width: 25%;
-}
 
 /* Bottom Black Section */
 .bottom-card {

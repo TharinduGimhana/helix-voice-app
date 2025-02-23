@@ -2,7 +2,7 @@ import "./BottomSection.css";
 import aboutBottomImage1 from "../../assets/images/about/about_bottom_1.png"
 import aboutBottomImage2 from "../../assets/images/about/about_bottom_2.png"
 
-const BottomSection = () => {
+const BottomSection: React.FC = () => {
   return (
     <div className="bottom-container">
       <div className="bottom-content">
