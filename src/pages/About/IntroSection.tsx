@@ -1,7 +1,7 @@
 import "./IntroSection.css";
 import aboutIntroImage from "../../assets/images/about/about_intro.png"
 
-const IntroSection = () => {
+const IntroSection: React.FC = () => {
   return (
     <div className="intro-container">
       <div className="intro-content">
