@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoCloudUploadOutline } from "react-icons/io5";
+import Popup from "../../components/Popup"; // Import Popup component
 
 const API_URL = "https://helix-app/api/contact"; // API endpoint
 
@@ -46,7 +47,8 @@ const ContactForm: React.FC = () => {
     const file = e.target.files?.[0];
 
     if (file) {
-      const allowedTypes = ["application/pdf", "image/jpeg", "image/jpg", "image/png"];
+      const allowedTypes = ["application/pdf", "image/jpeg", "image/jpg", "image/png", "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
       if (!allowedTypes.includes(file.type) || file.size > 5 * 1024 * 1024) {
         setErrors({ ...errors, file: true });
         setFileName(null);
@@ -96,7 +98,7 @@ const ContactForm: React.FC = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send message");
+        setPopup({ message: "Failed to send message.", type: "error" });
       }
 
       setPopup({ message: "Message sent successfully!", type: "success" });
@@ -122,7 +124,7 @@ const ContactForm: React.FC = () => {
       setPopup({ message: "Failed to send message. Try again later.", type: "error" });
     } finally {
       setLoading(false);
-      setTimeout(() => setPopup(null), 3000); 
+      setTimeout(() => setPopup(null), 3000);
     }
   };
 
@@ -202,7 +204,7 @@ const ContactForm: React.FC = () => {
           <div className="row file-upload">
             <label htmlFor="file-upload">
               <IoCloudUploadOutline className="upload-icon" />
-              {fileName ? <p className="center-file-name">{fileName}</p> : <p className="center-file-name">Attach PDF, JPG, JPEG, PNG (Max 5MB)</p>}
+              {fileName ? <p className="center-file-name">{fileName}</p> : <p className="center-file-name">Please include relevant PDF, DOC, JPEG, PNG files</p>}
             </label>
             <input type="file" id="file-upload" onChange={handleFileChange} />
           </div>
@@ -212,6 +214,7 @@ const ContactForm: React.FC = () => {
             <button type="submit" className="send-button" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
             </button>
+            {popup && <Popup message={popup.message} type={popup.type} onClose={() => setPopup(null)} />}
           </div>
         </form>
       </div>
