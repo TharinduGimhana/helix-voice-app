@@ -1,0 +1,166 @@
+.products-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  /* padding: 20px; */
+  text-align: center;
+}
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two columns */
+  /* gap: 20px; */
+  /* max-width: 1200px; */
+  margin: auto;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  /* Aligns content vertically */
+  /*gap: 20px; /* Adds spacing between image and text */
+  /* background: #EEEEEE; */
+  /* border-radius: 10px; */
+  overflow: hidden;
+  padding: 10px;
+  /* border: 1px solid rgba(0, 0, 0, 0.25); */
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  /* Horizontally center the image */
+  align-items: center;
+  /* Vertically center the image */
+  width: 40%;
+  /* Ensure the container takes up full width */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align content to the left */
+  text-align: left;
+  /* Ensure text aligns left */
+  width: 60%;
+  padding: 30px;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Add spacing between price and button */
+}
+
+.product-info h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.product-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 2;
+}
+
+.product-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff9800;
+  /* Adjust color as needed */
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.buy-now {
+  background-color: black;
+  color: white;
+  padding: 5px 25px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  /* This will make the button take the full width of its container */
+  max-width: 400px;
+  /* Limits the width on larger screens */
+  box-sizing: border-box;
+  /* Ensures padding is included in the width calculation */
+}
+
+.buy-now:hover {
+  background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .product-content:not(.change-order) {
+    flex-direction: column !important;
+  }
+
+  .product-image-container,
+  .product-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-image-container {
+    margin-bottom: 10px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    /* Single column for mobile */
+  }
+
+  .product-card {
+    flex-direction: column;
+    /* Stack image and text */
+    align-items: center;
+    /* Center content */
+  }
+
+  .product-image {
+    margin-left: auto;
+    margin-right: auto;
+    /* Optionally center the image horizontally */
+    padding: 15px;
+  }
+
+  .product-info {
+    align-items: center;
+    /* Center content */
+    text-align: center;
+    padding: 10px;
+    /* Center text */
+  }
+
+  .product-info.change-order {
+    align-items: center;
+    /* Center content */
+    text-align: left;
+    /* Center text */
+  }
+
+  .product-price {
+    font-size: 2.2rem;
+    /* Larger font size */
+    text-align: center;
+    /* Center-align text */
+    display: block;
+    /* Ensure proper centering */
+  }
+
+  .product-actions {
+    flex-direction: column-reverse;
+    /* Reverses order to show price first */
+    align-items: flex-start;
+    /* Keep left-aligned */
+    gap: 5px;
+    /* Adjust spacing */
+  }
+}

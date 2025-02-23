@@ -3,27 +3,39 @@
     "name": "Scalar Headphones",
     "description": "When running you will see the LEDs flashing on the side.",
     "price": "$50",
-    "image": "/src/assets/images/products/head_phone.png"
+    "productImage": "/src/assets/images/products/head_phone.png",
+    "productImageMaxWidth":"65%",
+    "backgroundColor": "#EEEEEE"
   },
   {
     "name": "Scalar Headphones",
     "description": "While running you can see the LEDs inside Headphones working.",
     "price": "$50",
-    "image": "/src/assets/images/products/head_phone2.png"
+    "productImage": "/src/assets/images/products/head_phone2.png",
+    "productImageMaxWidth":"75%",
+    "backgroundColor": "#FFFFFF"
   },
   {
     "name": "Helix Scalar Unit",
     "description":
-      "In as little as 30 minutes, the Helix Scalar is capable of penetrating every cell in the entire body, delivering a sense of general wellness.",
+      "In as little as 30 minutes, the Helix Scalar is capable of penetrating every cell in the entire body, delivering a sense of general wellness. Our bodies are naturally tuned to Scalar Waves. Helix Scalar uses scalar waves delivered without the risk of generating heat or damage to the cells, in a manner in which the body easily accepts the waves to stimulate cell rejuvenation.",
     "price": "$50",
-    "image": "/src/assets/images/products/helix_scalar_unit.png"
+    "productImage": "/src/assets/images/products/helix_scalar_unit.png",
+    "productImageMaxWidth":"80%",
+    "productAlignment":"right",
+    "productInfoSectionWidth": "80%",
+    "backgroundImage": "/src/assets/images/products/product_helix_scalar_unit.png"
   },
   {
     "name": "Helix Scalar Unit on Stand",
     "description":
-      "Helix Scalar is able to deliver a true longitudinal wave and doesn’t need the use of any potentially harmful carrier wave.",
+      "Scalar Waves, also referred to as Tesla Waves or Longitudinal Waves, are capable of penetrating every cell in the entire body and pass through all solid matter. The benefit of scalar waves is that it consumes very little power to transverse your body resulting in less stress on the body. Helix Scalar is able to deliver a true longitudinal wave and doesn’t need the use of any potentially harmful carrier wave that could create added cell stress. Our philosophy is to “do the least that does the most” ie.  the most gentle interaction with the body to achieve the most benefit to the body.",
     "price": "$50",
-    "image": "/src/assets/images/products/helix_scalar_unit_on_stand.png"
+    "productImage": "/src/assets/images/products/helix_scalar_unit_on_stand.png",
+    "productImageMaxWidth":"35%",
+    "productAlignment":"right",
+    "productInfoSectionWidth": "80%",
+    "backgroundColor": "#EEEEEE"
   }
   ]
   
