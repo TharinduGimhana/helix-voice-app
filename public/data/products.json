@@ -21,10 +21,11 @@
       "In as little as 30 minutes, the Helix Scalar is capable of penetrating every cell in the entire body, delivering a sense of general wellness. Our bodies are naturally tuned to Scalar Waves. Helix Scalar uses scalar waves delivered without the risk of generating heat or damage to the cells, in a manner in which the body easily accepts the waves to stimulate cell rejuvenation.",
     "price": "$50",
     "productImage": "/src/assets/images/products/helix_scalar_unit.png",
-    "productImageMaxWidth":"80%",
+    "productImageMaxWidth":"100%",
     "productAlignment":"right",
-    "productInfoSectionWidth": "80%",
-    "backgroundImage": "/src/assets/images/products/product_helix_scalar_unit.png"
+    "productInfoSectionWidth": "60%",
+    "backgroundImage": "/src/assets/images/products/product_helix_scalar_unit.png",
+    "productImageMargin":"-120px"
   },
   {
     "name": "Helix Scalar Unit on Stand",
@@ -35,7 +36,8 @@
     "productImageMaxWidth":"35%",
     "productAlignment":"right",
     "productInfoSectionWidth": "80%",
-    "backgroundColor": "#EEEEEE"
+    "backgroundColor": "#EEEEEE",
+    "productImageMargin":"-100px"
   }
   ]
   
