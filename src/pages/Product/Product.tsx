@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Background from "./Background";
 import ProductCard from "./ProductCard";
+import Background from "../../components/Background";
 
 // Define Product Type
 type Product = {
@@ -28,7 +28,9 @@ const Product = () => {
 
   return (
     <div className="products-container">
-      <Background />
+      <Background title={
+        <h1>Scalar Products</h1>
+      } />
       <ProductCard />
     </div>
   );
