@@ -1,21 +1,20 @@
-/* Container */
 .container-voicenotes {
   display: flex;
   margin: auto;
   padding: 20px;
+  padding-left: -40px !important;
+  padding-right: -40px !important;
   max-width: 1200px;
 }
 
-/* Image Section */
 .image-container-voicenotes {
-  width: 230px;
-  height: 230px;
+  width: 300px;
+  height: 300px;
   background-color: #1c2126;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin: auto; */
 }
 
 .microphone-icon {
@@ -23,26 +22,30 @@
   height: 130px;
 }
 
-/* Content Section */
 .content-voicenotes {
-  max-width: 900px;
+  width: 70%;
 }
 
-/* Typography */
-.title {
-  font-size: 24px;
+.title-v-note {
+  font-size: 35px;
   font-weight: bold;
 }
 
 .description {
   color: #666;
   margin-top: 10px;
+  font-size: 18px;
+  line-height: 2;
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   margin-top: 20px;
+}
+
+.content-voicenotes h4{
+  font-size: 20px;
 }
 
 .features {
@@ -55,6 +58,8 @@
   display: flex;
   align-items: center;
   margin: 5px 0;
+  font-size: 18px;
+  line-height: 2;
 }
 
 .bullet {
@@ -65,24 +70,22 @@
 .footer-text {
   color: #666;
   margin-top: 20px;
+  font-size: 18px;
 }
 
-/* Responsive Design */
-/* Adjust container for normal screens */
 @media (min-width: 899px) {
   .container-voicenotes {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* Pushes content and image apart */
+    justify-content: space-between;
   }
 
   .image-container-voicenotes {
-    order: 2; /* Moves image to the right */
-    margin-left: auto; 
+    order: 2;
+    margin-left: auto;
   }
 }
 
-/* Responsive Design */
 @media (max-width: 900px) {
   .content-voicenotes {
     max-width: 600px;
@@ -104,5 +107,4 @@
     width: 60px;
     height: 60px;
   }
-  
 }

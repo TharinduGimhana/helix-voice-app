@@ -45,7 +45,7 @@ const VoiceNotes: React.FC = () => {
       </div>
 
       <div className="content-voicenotes">
-        <h2 className="title">{noteContent.title}</h2>
+        <h2 className="title-v-note">{noteContent.title}</h2>
 
         <p className="description">
           {noteContent.description}

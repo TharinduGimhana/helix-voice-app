@@ -56,15 +56,17 @@
   font-size: 16px;
   text-align: left;
   font-weight: 500;
+  padding: 0px 10px 0px 0px;
 }
 
 .text-container-v-info h2 {
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
+  margin: 0px;
 }
 
 .text-container-v-info p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin-bottom: 10px;
   line-height: 2;

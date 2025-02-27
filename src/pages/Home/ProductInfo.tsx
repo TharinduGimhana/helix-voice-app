@@ -36,8 +36,8 @@ const ProductInfo: React.FC = () => {
             </div>
             <div className="text-container-v-info">
                 <h2>{product.header}</h2>
-                <p>
-                    {product.paragraph}
+                <p dangerouslySetInnerHTML={{ __html: product.paragraph }}>
+                    
                 </p>
                 <p><strong>{product.paraStrong}</strong></p>
             </div>
