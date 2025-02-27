@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ContactForm.css";
 import {
   FaPhoneVolume,
@@ -9,11 +9,35 @@ import {
 } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoCloudUploadOutline } from "react-icons/io5";
-import Popup from "../../components/Popup"; // Import Popup component
+import Popup from "../../components/Popup";
 
-const API_URL = "https://helix-app/api/contact"; // API endpoint
+const API_URL = "https://helix-app/api/contact";
+
+type ContactFormContent = {
+  contactTitle: string;
+  contactText: string;
+  contactPhone: string;
+  contactEmail: string;
+  contactAddress: string;
+};
 
 const ContactForm: React.FC = () => {
+  const [contactFormContentContent, setContactFormContent] =
+    useState<ContactFormContent>({
+      contactTitle: "",
+      contactText: "",
+      contactPhone: "",
+      contactEmail: "",
+      contactAddress: "",
+    });
+
+  useEffect(() => {
+    fetch("/data/contact.json")
+      .then((response) => response.json())
+      .then((data) => setContactFormContent(data))
+      .catch((error) => console.error("Error loading content:", error));
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -33,12 +57,17 @@ const ContactForm: React.FC = () => {
   });
 
   const [fileName, setFileName] = useState<string | null>(null);
-  const [popup, setPopup] = useState<{ message: string; type: "success" | "error" } | null>(null);
+  const [popup, setPopup] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
   const [loading, setLoading] = useState(false);
 
   const validateEmail = (email: string) => /\S+@\S+\.\S+/.test(email);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: false });
   };
@@ -47,8 +76,14 @@ const ContactForm: React.FC = () => {
     const file = e.target.files?.[0];
 
     if (file) {
-      const allowedTypes = ["application/pdf", "image/jpeg", "image/jpg", "image/png", "application/msword",
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+      const allowedTypes = [
+        "application/pdf",
+        "image/jpeg",
+        "image/jpg",
+        "image/png",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      ];
       if (!allowedTypes.includes(file.type) || file.size > 5 * 1024 * 1024) {
         setErrors({ ...errors, file: true });
         setFileName(null);
@@ -121,7 +156,10 @@ const ContactForm: React.FC = () => {
         file: false,
       });
     } catch (error) {
-      setPopup({ message: "Failed to send message. Try again later.", type: "error" });
+      setPopup({
+        message: "Failed to send message. Try again later.",
+        type: "error",
+      });
     } finally {
       setLoading(false);
       setTimeout(() => setPopup(null), 3000);
@@ -134,14 +172,20 @@ const ContactForm: React.FC = () => {
 
       <div className="contact-left">
         <div>
-          <h2>Get in Touch</h2>
-          <p>Say something, start a live chat</p>
+          <h2>{contactFormContentContent.contactTitle}</h2>
+          <p>{contactFormContentContent.contactText}</p>
         </div>
 
         <div className="contact-info">
-          <div><FaPhoneVolume /> +123 456 7890</div>
-          <div><FaEnvelope /> contact@example.com</div>
-          <div><FaMapMarkerAlt /> 123 Street, City, Country</div>
+          <div>
+            <FaPhoneVolume />{contactFormContentContent.contactPhone}
+          </div>
+          <div>
+            <FaEnvelope />{contactFormContentContent.contactEmail}
+          </div>
+          <div>
+            <FaMapMarkerAlt />{contactFormContentContent.contactAddress}
+          </div>
         </div>
 
         <div className="social-icons">
@@ -204,17 +248,33 @@ const ContactForm: React.FC = () => {
           <div className="row file-upload">
             <label htmlFor="file-upload">
               <IoCloudUploadOutline className="upload-icon" />
-              {fileName ? <p className="center-file-name">{fileName}</p> : <p className="center-file-name">Please include relevant PDF, DOC, JPEG, PNG files</p>}
+              {fileName ? (
+                <p className="center-file-name">{fileName}</p>
+              ) : (
+                <p className="center-file-name">
+                  Please include relevant PDF, DOC, JPEG, PNG files
+                </p>
+              )}
             </label>
             <input type="file" id="file-upload" onChange={handleFileChange} />
           </div>
-          {errors.file && <p className="error-message">Invalid file format or size exceeds 5MB.</p>}
+          {errors.file && (
+            <p className="error-message">
+              Invalid file format or size exceeds 5MB.
+            </p>
+          )}
 
           <div className="row button-row">
             <button type="submit" className="send-button" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
             </button>
-            {popup && <Popup message={popup.message} type={popup.type} onClose={() => setPopup(null)} />}
+            {popup && (
+              <Popup
+                message={popup.message}
+                type={popup.type}
+                onClose={() => setPopup(null)}
+              />
+            )}
           </div>
         </form>
       </div>
