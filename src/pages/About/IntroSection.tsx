@@ -1,20 +1,31 @@
 import "./IntroSection.css";
-import aboutIntroImage from "../../assets/images/about/about_intro.png"
+import aboutIntroImage from "../../assets/images/about/about_intro.png";
+import { useEffect, useState } from "react";
+
+type IntroSectionContent = {
+  aboutIntroText: string;
+};
 
 const IntroSection: React.FC = () => {
+  const [introSectionContent, setIntroSectionContent] =
+    useState<IntroSectionContent>({
+      aboutIntroText: "",
+    });
+
+  useEffect(() => {
+    fetch("/data/about.json")
+      .then((response) => response.json())
+      .then((data) => setIntroSectionContent(data))
+      .catch((error) => console.error("Error loading content:", error));
+  }, []);
+
   return (
     <div className="intro-container">
       <div className="intro-content">
-        {/* Left Side - Text */}
         <div className="intro-text">
-          <h2>
-            Feel the difference when <br />
-            you use <span className="highlight">VoiceSence</span> and <br />
-            Scalar wave together
+          <h2 dangerouslySetInnerHTML={{ __html: introSectionContent.aboutIntroText }}>
           </h2>
         </div>
-
-        {/* Right Side - Image */}
         <div className="intro-image">
           <img src={aboutIntroImage} alt="VoiceSence Experience" />
         </div>

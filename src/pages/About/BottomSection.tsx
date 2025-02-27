@@ -1,12 +1,28 @@
 import "./BottomSection.css";
-import aboutBottomImage1 from "../../assets/images/about/about_bottom_1.png"
-import aboutBottomImage2 from "../../assets/images/about/about_bottom_2.png"
+import aboutBottomImage1 from "../../assets/images/about/about_bottom_1.png";
+import aboutBottomImage2 from "../../assets/images/about/about_bottom_2.png";
+import { useEffect, useState } from "react";
+
+type BottomSectionContent = {
+  bottomSectionText: string;
+};
 
 const BottomSection: React.FC = () => {
+  const [bottomSectionContent, setBottomSectionContent] =
+    useState<BottomSectionContent>({
+      bottomSectionText: "",
+    });
+
+  useEffect(() => {
+    fetch("/data/about.json")
+      .then((response) => response.json())
+      .then((data) => setBottomSectionContent(data))
+      .catch((error) => console.error("Error loading content:", error));
+  }, []);
+
   return (
     <div className="bottom-container">
       <div className="bottom-content">
-        {/* Left Side - Two vertical cards */}
         <div className="bottom-left">
           <div className="card card-1">
             <img
@@ -23,13 +39,9 @@ const BottomSection: React.FC = () => {
             />
           </div>
         </div>
-
-        {/* Right Side - One card */}
         <div className="bottom-right">
           <div className="card right-card-content">
-            <p>
-            The discovery and history of Scalar Energy goes back to James Clark Maxwell in the 19th century.  Many years later, Nikola Tesla demonstrated the existence of Scalar energy. Later Einstein acknowledged the existence of Scalar energy which later led to the discovery and development of Quantum Physics. In the later years, Andrija Puharich concluded that Scalar Wave energy could enhance both endocrine and immune systems. Another researcher, Dr. Glen Rein, observed that human lymphocytes exposed to Scalar Waves showed improved cellular regeneration and DNA synthesis that naturally stimulated repair processes. These experiments and studies proved that Scalar Waves have the potential to positively improve the immune system’s response in the human body.
-            </p>
+            <p>{bottomSectionContent.bottomSectionText}</p>
           </div>
         </div>
       </div>
