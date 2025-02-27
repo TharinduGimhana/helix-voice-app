@@ -10,7 +10,7 @@ const IntroSection: React.FC = () => {
   const [introSectionContent, setIntroSectionContent] =
     useState<IntroSectionContent>({
       aboutIntroText: "",
-    });
+  });
 
   useEffect(() => {
     fetch("/data/about.json")
