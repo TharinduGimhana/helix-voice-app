@@ -1,0 +1,12 @@
+{
+    "footerLogo": "/src/assets/images/home/logo.png",
+    "footerInfo" :"<p><strong>Find us:</strong><br /> 8918 Clarkson Ave, Black<br /> Creek, BC, Canada V9J1B1</p>",
+    "footerInfoDes":" <p><strong>Working Hours:</strong><br />Monday - Friday <span>&nbsp;   </span>  <span>&nbsp;   </span> 8.00 am - 6.00 pm <br />Saturday - Sunday <span>&nbsp;   </span>  Contact via email</p>",
+    "footerBottomHeader":"Ready to discuss with you!",
+    "footerBottomUrl":"#",
+    "footerBottomUrlDes":"Lets Talk",
+    "rightContent":"©2025 HelixVoice",
+    "policyUrl":"#",
+    "policyContent":"Privacy Policy"
+
+}

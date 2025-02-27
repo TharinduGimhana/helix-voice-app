@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ProductCard.css";
 
-// Define Product Type
+
 type Product = {
     id: number;
     name: string;
