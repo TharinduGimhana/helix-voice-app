@@ -1,22 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductInfo.css";
-import image from "../../assets/images/home/productinfo.png"
+
+type Product = {
+    image: string;
+    imageOverlay: string;
+    header: string;
+    paragraph: string;
+    paraStrong: string;
+};
+
 const ProductInfo: React.FC = () => {
+
+    const [product, setProduct] = useState<Product>({
+        image: "",
+        imageOverlay: "",
+        header: "",
+        paragraph: "",
+        paraStrong: "",
+    });
+
+    useEffect(() => {
+        fetch("/data/home/productinfo.json")
+            .then(response => response.json())
+            .then(data => setProduct(data))
+            .catch(error => console.error("Error loading products:", error));
+    }, []);
+
     return <div className="product-info-p">
         <div className="product-info-container">
             <div className="image-container">
-                <img src={image} alt="Voice Analysis" className="voice-image" />
-                <div className="image-overlay">
-                    <h2>Let Your Voice Tell <br /> What Your Body Knows</h2>
+                <img src={product.image} alt="Voice Analysis" className="voice-image" />
+                <div className="image-overlay" dangerouslySetInnerHTML={{ __html: product.imageOverlay }}>
+
                 </div>
             </div>
             <div className="text-container-v-info">
-                <h2>What is in a Voice</h2>
+                <h2>{product.header}</h2>
                 <p>
-                    Your voice is more than just sound—it’s a reflection of your entire being. Every organ, gland, and system in your body has a unique frequency, and VoiceSense captures these patterns to create a voiceprint—like a holographic snapshot of your energetic health.
-                    This voiceprint reveals imbalances, showing where your body needs support, where energy is depleted, and where stimulation is needed. By understanding these frequency patterns, you can uncover the root causes of physical and emotional imbalances and take action toward better health and vitality.
+                    {product.paragraph}
                 </p>
-                <p><strong>Discover what your voice reveals about you.</strong></p>
+                <p><strong>{product.paraStrong}</strong></p>
             </div>
         </div>
     </div>;
