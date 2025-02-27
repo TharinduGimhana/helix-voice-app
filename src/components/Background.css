@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 2rem;
     font-weight: bold;
     overflow: hidden;
   }
@@ -27,5 +26,11 @@
     position: relative;
     font-size: 25px;
     z-index: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 18px;
+    }
   }
   
