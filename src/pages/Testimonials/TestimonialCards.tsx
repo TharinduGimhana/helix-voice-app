@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./TestimonialCards.css";
-import comma from "../../assets/images/testimonials/comma.png"
+import comma from "../../assets/images/testimonials/comma.svg"
 
 type Testimonial = {
     text: string;
@@ -26,7 +26,7 @@ const TestimonialCards: React.FC = () => {
         <div className="testimonials-grid">
             {testimonials.map((testimonial, index) => (
                 <div className={`testimonial-card ${testimonial.accent ? `accent-${testimonial.accent}` : ""}`} key={index}>
-                    <div className="quote"> <img src={comma} className="comma" /> <img src={comma} className="comma" /></div>
+                    <div className="quote"> <img src={comma} className="comma" /></div>
                     <p className="testimonial-text">{testimonial.text}</p>
                     <div className="testimonial-footer">
                         <img src={testimonial.image} alt={testimonial.name} className="avatar" />
