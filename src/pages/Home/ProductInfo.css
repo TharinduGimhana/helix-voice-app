@@ -49,6 +49,7 @@
   font-weight: bold;
   padding: 10px;
   line-height: 2;
+
 }
 
 .text-container-v-info {
@@ -84,6 +85,10 @@
     max-width: 100%;
   }
 
+  .image-overlay{
+    height: 99%;
+  }
+
   .image-overlay h2 {
     font-size: 25px;
   }
@@ -97,7 +102,7 @@
   }
 
   .text-container-v-info p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .product-info-p {

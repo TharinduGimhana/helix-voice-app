@@ -12,6 +12,7 @@
   .left-image {
     top: 30%;
     width: 100px;
+    left: 2%;
   }
 }
 
@@ -25,6 +26,13 @@
 @media (min-width: 1025px) and (max-width: 1200px) {
   .left-image {
     top: 40%;
-    width: 400px;
+    width: 200px;
   }
 }
+
+@media (min-width: 1200px) {
+  .left-image {
+    top: 40%;
+  }
+}
+

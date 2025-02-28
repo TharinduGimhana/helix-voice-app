@@ -81,6 +81,10 @@
     max-width: 100%;
   }
 
+  .image-overlay{
+    height: 99%;
+  }
+
   .image-overlay h2 {
     font-size: 25px;
   }
