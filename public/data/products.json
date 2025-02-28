@@ -37,7 +37,7 @@
       "Scalar Waves, also referred to as Tesla Waves or Longitudinal Waves, are capable of penetrating every cell in the entire body and pass through all solid matter. The benefit of scalar waves is that it consumes very little power to transverse your body resulting in less stress on the body. Helix Scalar is able to deliver a true longitudinal wave and doesn’t need the use of any potentially harmful carrier wave that could create added cell stress. Our philosophy is to “do the least that does the most” ie.  the most gentle interaction with the body to achieve the most benefit to the body.",
     "price": "$50",
     "productImage": "/src/assets/images/products/helix_scalar_unit_on_stand.png",
-    "productImageMaxWidth":"35%",
+    "productImageMaxWidth":"",
     "productAlignment":"right",
     "productInfoSectionWidth": "80%",
     "backgroundColor": "#EEEEEE",
