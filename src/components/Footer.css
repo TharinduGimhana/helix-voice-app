@@ -135,11 +135,12 @@
   .footer-social {
     display: flex;
     flex-direction: row;  
-    align-items: center;  
-    justify-content: center; 
+    /* align-items: center;  
+    justify-content: center;  */
     flex-wrap: nowrap; 
-    gap: 15px; 
+    /* gap: 15px;  */
     font-size: 12px;
+    justify-content: space-around;
   }
 
   .footer-social p,

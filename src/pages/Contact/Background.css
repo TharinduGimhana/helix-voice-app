@@ -83,6 +83,7 @@
   .contact-title {
     height: 200px;
     font-size: 1.2rem;
+    background-size: cover;
   }
 
   .contact-title h2 {
@@ -92,14 +93,18 @@
   }
 
   .el-top {
-    height: 160%;
+    height: 350%;
   }
 
   .el-mid {
-    height: 150%;
+    height: 350%;
   }
 
   .el-bot {
-    height: 170%;
+    height: 350%;
+  }
+
+  .contact-header h2{
+    font-size: 30px;
   }
 }

@@ -237,7 +237,7 @@ const ContactForm: React.FC = () => {
 
           <div className="row">
             <textarea
-              name="description"
+              name="Message"
               placeholder="Write your message..."
               className={errors.description ? "error" : ""}
               value={formData.description}
