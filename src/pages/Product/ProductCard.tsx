@@ -4,6 +4,7 @@ import "./ProductCard.css";
 
 type Product = {
     id: number;
+    orderId:string;
     name: string;
     price: number;
     description: string;
@@ -61,7 +62,7 @@ const ProductCard: React.FC = () => {
                                 src={product.productImage}
                                 alt={product.name}
                                 style={{ maxWidth: product.productImageMaxWidth, marginBottom: product.productImageMargin }}
-                                className="product-image"
+                                className={`product-image order-${product.orderId}`}
                             />
                         </div>
                         <div

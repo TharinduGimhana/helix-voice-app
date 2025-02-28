@@ -1,5 +1,6 @@
 [
   {
+    "orderId": "1",
     "name": "Scalar Headphones",
     "description": "When running you will see the LEDs flashing on the side.",
     "price": "$50",
@@ -8,6 +9,7 @@
     "backgroundColor": "#EEEEEE"
   },
   {
+    "orderId": "2",
     "name": "Scalar Headphones",
     "description": "While running you can see the LEDs inside Headphones working.",
     "price": "$50",
@@ -16,6 +18,7 @@
     "backgroundColor": "#FFFFFF"
   },
   {
+    "orderId": "3",
     "name": "Helix Scalar Unit",
     "description":
       "In as little as 30 minutes, the Helix Scalar is capable of penetrating every cell in the entire body, delivering a sense of general wellness. Our bodies are naturally tuned to Scalar Waves. Helix Scalar uses scalar waves delivered without the risk of generating heat or damage to the cells, in a manner in which the body easily accepts the waves to stimulate cell rejuvenation.",
@@ -28,6 +31,7 @@
     "productImageMargin":"-120px"
   },
   {
+    "orderId": "4",
     "name": "Helix Scalar Unit on Stand",
     "description":
       "Scalar Waves, also referred to as Tesla Waves or Longitudinal Waves, are capable of penetrating every cell in the entire body and pass through all solid matter. The benefit of scalar waves is that it consumes very little power to transverse your body resulting in less stress on the body. Helix Scalar is able to deliver a true longitudinal wave and doesn’t need the use of any potentially harmful carrier wave that could create added cell stress. Our philosophy is to “do the least that does the most” ie.  the most gentle interaction with the body to achieve the most benefit to the body.",
