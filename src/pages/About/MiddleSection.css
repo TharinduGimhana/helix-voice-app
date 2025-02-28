@@ -31,14 +31,94 @@
 }
 
 .about-content p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     line-height: 2.2;
     color: #555;
-    padding: 40px;
+    padding: 20px;
 }
 
 /* Right Sidebar (Orange Section) */
 .about-right {
-    background: #E46926; /* Orange color */
+    background: #E46926;
+    /* Orange color */
     width: 25%;
+}
+
+/* For mobile portrait */
+@media only screen and (max-width: 480px) {
+    .about-right {
+        width: 100%;
+    }
+    .about-content {
+        width: 75%;
+    }
+    .about-content p {
+        font-size: 1rem;
+        line-height: 2;
+        padding: 20px;
+    }
+}
+
+/* For mobile landscape */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* Right Sidebar (Orange Section) */
+    .about-right {
+        width: 100%;
+    }
+    .about-content {
+        width: 75%;
+    }
+    .about-content p {
+        font-size: 1rem;
+        line-height: 2;
+        padding: 20px;
+    }
+}
+
+/* For tablet portrait */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* Right Sidebar (Orange Section) */
+    .about-right {
+        width: 100%;
+    }
+    .about-content {
+        width: 75%;
+    }
+    .about-content p {
+        font-size: 1.2rem;
+        line-height: 2;
+        padding: 20px;
+    }
+}
+
+/* Media query for Nest Hub Max or similar devices */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .right-card-content p {
+        font-size: 1.3rem; 
+        line-height: 2.4;
+        padding: 35px; 
+    }
+
+    .bottom-content {
+        flex-direction: row; 
+    }
+    .about-content p {
+        font-size: 1.3rem;
+        line-height: 2;
+        padding: 20px;
+    }
+}
+
+/* New media query for large screens (1519px x 2428px) */
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+    .about-content p {
+        font-size: 1.4rem; 
+        line-height: 2.2;
+        padding: 40px; 
+    }
+
+    .bottom-content {
+        flex-direction: row;
+    }
 }

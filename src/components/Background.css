@@ -27,10 +27,37 @@
     font-size: 25px;
     z-index: 1;
   }
-
-  @media screen and (max-width: 768px) {
-    .title {
-      font-size: 18px;
-    }
-  }
   
+  /* Responsive Layouts */
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .title {
+    font-size: 22px;
+  }
+}
+
+/* Media query for Nest Hub Max or similar devices */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .title {
+    font-size: 26px;
+  }
+}
+
+/* New media query for large screens (1519px x 2428px) */
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+  .title {
+    font-size: 28px;
+  }
+}
+
+/* For screens larger than 1600px */
+@media only screen and (min-width: 1601px) {
+  .title {
+    font-size: 30px;
+  }
+}

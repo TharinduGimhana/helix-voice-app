@@ -4,134 +4,109 @@
     align-items: center;
 }
 
-.bottom-content {
-    display: flex;
-    width: 100%;
-    max-width: 100%; /* Restricts max width for better layout */
-}
-
-/* Left and Right Sections */
-.bottom-left,
-.bottom-right {
-    width: 50%; /* Equal division */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Left Side: Two Equal Cards */
-.bottom-left {
-    height: 100%;
-}
-
-.card {
-    flex: 1; /* Makes both cards equal height */
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.card-image {
-    width: 100%;      /* Make image stretch to card width */
-    height: 100%;     /* Make image stretch to card height */
-    object-fit: cover; /* Ensures image fills the card without distortion */
-}
-
 /* Flip Image in Card-2 */
 .flipped-image {
-    transform: scaleY(-1); /* Flip image horizontally */
-}
-
-/* Right Side: Single Card */
-.bottom-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: scaleY(-1);
 }
 
 .right-card-content p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2.2;
     color: #fff;
-    padding: 40px;
-}
-
-.right-card-content{
     background: #1E1E1E;
     border-radius: 0px;
-   
+    padding: 30px;
+    margin: 0; /* Remove extra spacing */
+    text-align: justify;
 }
 
-/* For mobile portrait */
-@media only screen and (max-width: 480px) {
+.bottom-content {
+    display: flex;
+    align-items: stretch; /* Equal height for both sections */
+    width: 100%;
+}
+
+.bottom-left, .bottom-right {
+    flex: 1; /* Equal width */
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-left .card {
+    flex: 1; /* Fill container height */
+    display: flex;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevent distortion */
+}
+
+.bottom-right .right-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 100%; /* Match image height */
+}
+
+/* Responsive Layouts */
+@media only screen and (max-width: 767px) {
     .bottom-content {
-        flex-direction: column;
+        flex-direction: column; /* Stack layout for small screens */
     }
-    .bottom-left, .bottom-right {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+
     .right-card-content p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 2;
-        padding: 15px;
+        padding: 30px;
     }
 }
 
-/* For mobile landscape */
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-    .right-card-content p {
-        font-size: 1.4rem;
-        line-height: 2.2;
-        padding: 20px;
-    }
-
-    .bottom-content {
-        display: inline;
-    }
-
-    .bottom-left, .bottom-right {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-}
-
-/* For tablet portrait */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .bottom-content {
-        flex-direction: column;
-    }
-    
     .right-card-content p {
-        font-size: 2rem;
-        padding: 30px;
-    }
-
-    .bottom-left, .bottom-right {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        font-size: 1.2rem;
+        line-height: 2;
+        padding: 35px;
     }
 }
 
-/* For tablet landscape */
+/* Media query for Nest Hub Max or similar devices */
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-    .bottom-content {
-        flex-direction: column;
-    }
-    .bottom-left, .bottom-right {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
     .right-card-content p {
-        font-size: 2rem;
-        padding: 30px;
+        font-size: 1.3rem; /* Adjusted font size for medium devices */
+        line-height: 2.4;
+        padding: 40px; /* Increased padding for better readability */
+    }
+
+    .bottom-content {
+        flex-direction: row; /* Keep items in row */
+    }
+}
+
+/* New media query for large screens (1519px x 2428px) */
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+    .right-card-content p {
+        font-size: 1.4rem; /* Adjust font size for larger screens */
+        line-height: 2.6;
+        padding: 40px; /* More padding for larger screens */
+    }
+
+    .bottom-content {
+        flex-direction: row; /* Maintain horizontal layout */
+    }
+}
+
+/* For screens larger than 1600px */
+@media only screen and (min-width: 1601px) {
+    .right-card-content p {
+        font-size: 1.5rem;
+        line-height: 2.8;
+        padding: 50px;
+    }
+
+    .bottom-content {
+        flex-direction: row; /* Keep items in row for larger screens */
     }
 }

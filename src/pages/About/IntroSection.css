@@ -16,15 +16,15 @@
 /* Left Side - Text */
 .intro-text {
     flex: 1;
-    padding: 40px;
+    /* padding: 40px; */
     text-align: center;
 }
 
 .intro-text h2 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bold;
     color: #1e1e1e;
-    line-height: 2.2;
+    line-height: 2;
 }
 
 .highlight {
@@ -38,7 +38,7 @@
 
 .intro-image img {
     width: 100%;
-    height: auto;
+    height: 400px;
     display: block;
 }
 
@@ -47,8 +47,8 @@
     .intro-content {
         display: inline;
     }
-    .intro-text {
-        padding: 20px;
+    .intro-image img {
+        height: 300px;
     }
     .intro-text h2 {
         font-size: 1.5rem;
@@ -65,7 +65,7 @@
         padding: 10px;
     }
     .intro-text h2 {
-        font-size: 2rem;
+        font-size: 30px;
         line-height: 1.6;
     }
 }
@@ -77,8 +77,9 @@
         text-align: center;
     }
 
-    .intro-text {
-        padding: 20px;
+    .intro-text h2 {
+        font-size: 40px;
+        line-height: 1.6;
     }
 
     .intro-image img {
@@ -94,8 +95,9 @@
         text-align: center;
     }
 
-    .intro-text {
-        padding: 20px;
+    .intro-text h2 {
+        font-size: 40px;
+        line-height: 1.6;
     }
 
     .intro-image img {
@@ -103,3 +105,19 @@
         height: auto;
     }
 }
+
+/* New media query for large screens (1519px x 2428px) */
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+    .intro-text h2 {
+        font-size: 42px;
+        line-height: 1.6;
+    }
+  }
+  
+  /* For screens larger than 1600px */
+  @media only screen and (min-width: 1601px) {
+    .intro-text h2 {
+        font-size: 45px;
+        line-height: 1.6;
+    }
+  }
