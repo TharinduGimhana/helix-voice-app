@@ -36,3 +36,14 @@
   }
 }
 
+@media (min-width: 1200px) and (max-height: 800px) {
+  .left-image {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1400px) and (max-height: 1000px) {
+  .left-image {
+    width: 350px;
+  }
+}
